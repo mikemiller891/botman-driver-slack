@@ -6,16 +6,16 @@ use Slack\File;
 use Mockery as m;
 use Slack\RealTimeClient;
 use React\EventLoop\Factory;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use React\Promise\FulfilledPromise;
 use BotMan\Drivers\Slack\SlackRTMDriver;
 use BotMan\Drivers\Slack\Extensions\User;
 use BotMan\BotMan\Messages\Incoming\IncomingMessage;
 use BotMan\BotMan\Messages\Outgoing\OutgoingMessage as OutgoingMessage;
 
-class SlackRTMDriverTest extends PHPUnit_Framework_TestCase
+class SlackRTMDriverTest extends TestCase
 {
-    public function tearDown()
+    public function tearDown() : void
     {
         m::close();
     }

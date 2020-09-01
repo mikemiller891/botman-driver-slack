@@ -15,17 +15,18 @@
         }
     ],
     "require": {
-        "php": ">=7.0",
-        "botman/botman": "~2.1",
+        "php": "^7.4",
+        "botman/botman": "dev-laravel7",
         "mpociot/slack-client": "~1.0"
     },
     "require-dev": {
-        "botman/studio-addons": "~1.0",
-        "phpunit/phpunit": "~5.0",
+        "botman/studio-addons": "dev-laravel7",
+        "phpunit/phpunit": "^8.5",
         "illuminate/console": "~5.0",
         "illuminate/support": "~5.0",
         "mockery/mockery": "dev-master",
-        "ext-curl": "*"
+        "ext-curl": "*",
+        "symfony/http-foundation": "^5.1"
     },
     "suggest": {
         "mpociot/slack-client": "Use the Slack RTM API with BotMan"
@@ -50,5 +51,16 @@
                 "BotMan\\Drivers\\Slack\\Providers\\SlackServiceProvider"
             ]
         }
-    }
+    },
+
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/mikemiller891/botman-botman.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/mikemiller891/botman-studio-addons.git"
+        }
+    ]
 }
